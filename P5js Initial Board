@@ -1,0 +1,29 @@
+# P5js-Checkerboard
+
+let boardSize = 400;
+let sqCount = 8;
+let color1 = 'black';
+let color2 = 'red';
+
+//if (num%2===0){
+//print("even");
+//}else{
+//print("odd");
+//}
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255);
+  let size = boardSize / sqCount;
+  for (let row = 0; row <= size; row++) {
+    //creates row
+    for (let col = 0; col <= size; col++) {
+      //fill(color1);
+      square(col * size, row * size, size);
+      //fill(color2);
+          }
+  }
+}
