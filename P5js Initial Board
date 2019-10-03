@@ -2,14 +2,8 @@
 
 let boardSize = 400;
 let sqCount = 8;
-let color1 = 'black';
-let color2 = 'red';
-
-//if (num%2===0){
-//print("even");
-//}else{
-//print("odd");
-//}
+let color1 = 'blue';
+let color2 = 'white';
 
 function setup() {
   createCanvas(400, 400);
@@ -18,12 +12,16 @@ function setup() {
 function draw() {
   background(255);
   let size = boardSize / sqCount;
+  let evenSQC = color1;
+  let oddSQC = color2;
   for (let row = 0; row <= size; row++) {
-    //creates row
-    for (let col = 0; col <= size; col++) {
-      //fill(color1);
+       for (let col = 0; col <= size; col++) {
+      if ((row + col) % 2 == 0) {
+        fill(evenSQC);
+      } else {
+        fill(oddSQC);
+      }
       square(col * size, row * size, size);
-      //fill(color2);
-          }
+    }
   }
 }
